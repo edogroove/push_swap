@@ -3,20 +3,23 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+         #
+#    By: enanni <enanni@student.42firenze.it>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/22 12:23:13 by nmarmugi          #+#    #+#              #
-#    Updated: 2024/03/27 11:39:35 by nmarmugi         ###   ########.fr        #
+#    Updated: 2024/03/28 17:30:50 by enanni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
 LIBFTPATH = ./libft
 
 LIBFTNAME = libft.a
 
-SRCS =	main.c av_check.c av_check_duplicate.c \
+SRCS =	av_check.c \
+		main.c \
+		av_check_duplicate.c \
+		av_check_utils.c
 		
 OBJS = $(SRCS:.c=.o)
 

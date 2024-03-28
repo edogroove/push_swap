@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enanni <enanni@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 18:09:54 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/27 14:34:57 by nmarmugi         ###   ########.fr       */
+/*   Updated: 2024/03/28 17:31:25 by enanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ int	main(int ac, char **av)
 		result = av_one_arg(av);
 		if (result == NULL)
 			return (0);
+		if (is_correct_zero_arr(result) == 1)
+			return (0);
+		if (have_duplicates_arr(result) == 1)
+			return (0);
 		while (result[i] != NULL)
 		{
 			printf("%s\n", result[i]);
@@ -31,6 +35,8 @@ int	main(int ac, char **av)
 	}
 	if (ac > 2)
 	{
+		if (is_correct_zero(av) == 1)
+			return (1);
 		result = av_args(av);
 		if (result == NULL)
 			return (0);
