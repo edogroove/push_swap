@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enanni <enanni@student.42firenze.it>       +#+  +:+       +#+        */
+/*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 18:09:54 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/28 19:52:08 by enanni           ###   ########.fr       */
+/*   Created: 2024/03/28 20:03:59 by nmarmugi          #+#    #+#             */
+/*   Updated: 2024/03/29 14:15:21 by nmarmugi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,20 @@ int	main(int ac, char **av)
 		j = 0;
 		result = av_one_arg(av);
 		if (result == NULL)
+		{
+			free_string_array(result);
 			return (0);
+		}
 		if (is_correct_zero_arr(result) == 1)
+		{
+			free_string_array(result);
 			return (0);
+		}
 		if (have_duplicates_arr(result) == 1)
+		{
+			free_string_array(result);
 			return (0);
+		}
 		while (result[j])
 		{
 			number = ft_atoi_ps(result[j]);
@@ -40,6 +49,7 @@ int	main(int ac, char **av)
 			printf("%d\n", number);
 			j++;
 		}
+		free_string_array(result);
 	}
 	if (ac > 2)
 	{

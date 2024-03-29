@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enanni <enanni@student.42firenze.it>       +#+  +:+       +#+        */
+/*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 18:10:28 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/28 18:15:41 by enanni           ###   ########.fr       */
+/*   Created: 2024/03/28 20:03:43 by nmarmugi          #+#    #+#             */
+/*   Updated: 2024/03/29 14:12:13 by nmarmugi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		have_duplicates_arr(char **av);
 int		is_correct_zero(char **av);
 int		is_correct_zero_arr(char **av);
 int		arg_is_zero(char *av);
+void	free_string_array(char **array);
 
 #endif

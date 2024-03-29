@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   av_check_duplicate.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enanni <enanni@student.42firenze.it>       +#+  +:+       +#+        */
+/*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 11:36:34 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/28 17:32:43 by enanni           ###   ########.fr       */
+/*   Created: 2024/03/28 20:04:24 by nmarmugi          #+#    #+#             */
+/*   Updated: 2024/03/28 20:04:27 by nmarmugi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
