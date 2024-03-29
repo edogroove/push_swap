@@ -6,7 +6,7 @@
 /*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 20:01:22 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/28 20:01:24 by nmarmugi         ###   ########.fr       */
+/*   Updated: 2024/03/29 14:43:39 by nmarmugi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi_ps(const char *str)
 {
 	int			sign;
-	long long	res;
+	long int	res;
 
 	sign = 1;
 	res = 0;
@@ -32,6 +32,8 @@ int	ft_atoi_ps(const char *str)
 		res = res * 10 + (*str - '0');
 		str++;
 	}
-	ft_limits_ps(res, sign);
-	return ((int)res * sign);
+	res *= sign;
+	if (res > 2147483647 || res < -2147483648)
+		ft_display_exit_ps();
+	return ((int)res);
 }

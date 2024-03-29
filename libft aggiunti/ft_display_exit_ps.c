@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_limits_ps.c                                     :+:      :+:    :+:   */
+/*   ft_display_exit_ps.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 20:01:54 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/28 20:01:56 by nmarmugi         ###   ########.fr       */
+/*   Updated: 2024/03/29 14:44:20 by nmarmugi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_limits_ps(long long n, int sign)
+void	ft_display_exit_ps(void)
 {
-	if (sign == 1)
-	{
-		if (n > INT_MAX)
-		{
-			write (2, "Error\n", 6);
-			exit (1);
-		}
-	}
-	if (sign == -1)
-	{
-		if (n < INT_MIN)
-		{
-			write (2, "Error\n", 6);
-			exit (1);
-		}
-	}
+	ft_putstr_fd("Error\n", 2);
+	exit(0);
 }
