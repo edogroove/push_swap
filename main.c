@@ -6,7 +6,7 @@
 /*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 20:03:59 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/29 14:15:21 by nmarmugi         ###   ########.fr       */
+/*   Updated: 2024/03/29 17:26:32 by nmarmugi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ int	main(int ac, char **av)
 		while (result[j])
 		{
 			number = ft_atoi_ps(result[j]);
+			if (ft_atoi_ps(result[j]) == 1)
+			{
+				free_string_array(result);
+				ft_display_exit_ps();
+			}
 			j++;
 		}
 		j = 0;
@@ -62,6 +67,8 @@ int	main(int ac, char **av)
 		while (result[j])
 		{
 			number = ft_atoi_ps(result[j]);
+			if (ft_atoi_ps(result[j]) == 1)
+				ft_display_exit_ps();
 			j++;
 		}
 		j = 0;

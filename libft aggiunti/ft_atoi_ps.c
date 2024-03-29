@@ -6,7 +6,7 @@
 /*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 20:01:22 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/29 14:43:39 by nmarmugi         ###   ########.fr       */
+/*   Updated: 2024/03/29 17:24:02 by nmarmugi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int	ft_atoi_ps(const char *str)
 	}
 	res *= sign;
 	if (res > 2147483647 || res < -2147483648)
-		ft_display_exit_ps();
+		return(1);
 	return ((int)res);
 }
