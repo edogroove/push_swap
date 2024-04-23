@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+         #
+#    By: enanni <enanni@student.42firenze.it>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/28 20:03:52 by nmarmugi          #+#    #+#              #
-#    Updated: 2024/03/28 20:03:54 by nmarmugi         ###   ########.fr        #
+#    Created: 2024/04/15 18:35:25 by enanni            #+#    #+#              #
+#    Updated: 2024/04/23 19:03:49 by enanni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS =	av_check.c \
 		
 OBJS = $(SRCS:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -g -Wall -Wextra -Werror
 
 $(NAME):
 		make -C $(LIBFTPATH)
@@ -41,3 +41,5 @@ fclean:		clean
 			make -C $(LIBFTPATH) fclean
 re:			fclean all
 .PHONY:		all clean fclean re
+
+.SILENT:

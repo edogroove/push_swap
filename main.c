@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmarmugi <nmarmugi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enanni <enanni@student.42firenze.it>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 20:03:59 by nmarmugi          #+#    #+#             */
-/*   Updated: 2024/03/29 17:26:32 by nmarmugi         ###   ########.fr       */
+/*   Created: 2024/04/15 18:18:45 by enanni            #+#    #+#             */
+/*   Updated: 2024/04/23 20:03:19 by enanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main(int ac, char **av)
 {
-	int		j;
-	char	**result;
-	int		number;
+	int			j;
+	char		**result;
+	long int	number;
 
 	if (ac == 2)
 	{
@@ -40,7 +40,7 @@ int	main(int ac, char **av)
 		while (result[j])
 		{
 			number = ft_atoi_ps(result[j]);
-			if (ft_atoi_ps(result[j]) == 1)
+			if (number > INT_MAX || number < INT_MIN)
 			{
 				free_string_array(result);
 				ft_display_exit_ps();
@@ -51,7 +51,7 @@ int	main(int ac, char **av)
 		while (result[j])
 		{
 			number = ft_atoi_ps(result[j]);
-			printf("%d\n", number);
+			printf("%ld\n", number);
 			j++;
 		}
 		free_string_array(result);
@@ -67,7 +67,7 @@ int	main(int ac, char **av)
 		while (result[j])
 		{
 			number = ft_atoi_ps(result[j]);
-			if (ft_atoi_ps(result[j]) == 1)
+			if (number > INT_MAX || number < INT_MIN)
 				ft_display_exit_ps();
 			j++;
 		}
@@ -75,7 +75,7 @@ int	main(int ac, char **av)
 		while (result[j])
 		{
 			number = ft_atoi_ps(result[j]);
-			printf("%d\n", number);
+			printf("%ld\n", number);
 			j++;
 		}
 	}
